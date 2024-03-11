@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    gap: 14px;
+padding-top: 14px;
+padding-bottom: 14px;
+padding-left: 10px;
+border-bottom: solid 1px black;
+box-shadow: inset;
+
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.isActive {
+    color: navy;
+}
