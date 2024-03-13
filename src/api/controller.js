@@ -32,35 +32,37 @@ export async function getTrendingMovies() {
 
 export async function searchMovie(query, page) {
   const response = await instance.get(
-    setPathParameters(API_SEARCH_MOVIE, { query, page })
+    setPathParameters(API_SEARCH_MOVIE, { query, page }),
+    config
   );
   return response.data;
 }
 
 export async function getMovieById(movieId) {
   const response = await instance.get(
-    setPathParameters(API_MOVIE_BY_ID, { movieId })
+    setPathParameters(API_MOVIE_BY_ID, { movieId }), config
   );
   return response.data;
 }
 
 export async function getImagePath() {
-  const response = await instance.get(API_IMAGE_PATH);
+  console.log();
+  const response = await instance.get(API_IMAGE_PATH, config);
   return response.data.images;
 }
 
 export async function getCredits(movieId) {
    const response = await instance.get(
-     setPathParameters(API_CREDITS, { movieId })
+     setPathParameters(API_CREDITS, { movieId }),
+     config
    );
    return response.data.cast;
 }
 
 export async function getReviews(movieId) {
   const response = await instance.get(
-    setPathParameters(API_REVIEWS, { movieId })
+    setPathParameters(API_REVIEWS, { movieId }),
+    config
   );
   return response.data.results;
 }
-
-console.log(window);

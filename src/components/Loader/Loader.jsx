@@ -1,17 +1,15 @@
-import { Watch } from "react-loader-spinner";
+import { ProgressBar } from "react-loader-spinner";
 
-const Loader = () => {
+export default function Loader() {
   return (
-    <Watch
+    <ProgressBar
       visible={true}
       height="80"
       width="80"
-      radius="48"
       color="#4fa94d"
-      ariaLabel="watch-loading"
+      ariaLabel="progress-bar-loading"
       wrapperStyle={{}}
       wrapperClass=""
     />
   );
-};
-export default Loader;
+}

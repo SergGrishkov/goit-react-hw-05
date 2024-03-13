@@ -6,7 +6,7 @@ const makeLinkClass = (isActive) => {
     return clsx(css.link, isActive && css.isActive);
 }
 
-export default function Navigation() {
+export const Navigation = () => {
     return (
       <div>
         <nav className={css.nav}>
