@@ -8,8 +8,8 @@ export default function Home() {
   useEffect(() => {
     async function getDataMovies() {
       try {
-        const { results } = await getTrendingMovies();
-        setTrendingMovies(results);
+        const data = await getTrendingMovies();
+        setTrendingMovies(data);
       } catch (error) {
         console.log(error);
       }
