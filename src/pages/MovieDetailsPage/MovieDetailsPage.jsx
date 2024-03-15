@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { getImagePath, getMovieById } from "../../rest-api";
+import { getImagePath, getMovieById } from "../../api/controller";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { useState } from "react";
+import { useRef } from "react";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { Suspense } from "react";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import css from "./MovieDetailsPage.module.css";
-import { IoMdArrowRoundBack } from "react-icons/io";
-import { useRef } from "react";
-import { Suspense } from "react";
 import Loader from "../../components/Loader/Loader";
 
 export default function MovieDetailsPage() {
@@ -48,7 +48,7 @@ export default function MovieDetailsPage() {
         <img
           className={css.image}
           src={`${urlPath}${movies.poster_path}`}
-          alt="movies.title"
+          alt={movies.title}
         />
         <div className={css.info}>
           <h2>{movies.title}</h2>
