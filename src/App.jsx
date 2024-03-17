@@ -6,7 +6,7 @@ import { lazy } from "react";
 import Loader from "./components/Loader/Loader";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
-const MoviePage = lazy(() => import("./pages/MoviePage/MoviePage"));
+const MoviePage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
   import("./pages/MovieDetailsPage/MovieDetailsPage")
 );

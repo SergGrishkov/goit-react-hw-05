@@ -7,7 +7,7 @@ import SearchForm from "../../components/SearchForm/SearchForm";
 import Loader from "../../components/Loader/Loader";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import css from "./MoviePage.module.css";
+import css from "./MoviesPage.module.css";
 
 export default function MoviePage() {
   const [movies, setMovies] = useState([]);
